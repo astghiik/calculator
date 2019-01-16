@@ -1,0 +1,27 @@
+table {
+    border: 1px solid black;
+}
+
+
+td, tr {
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+}
+
+td:not(#work) {
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #e2e2e296
+}
+
+td:not(#work):hover {
+    background-color: #6e6e6e9f;
+}
+
+#work {
+    font-size: 20px;
+    text-align: right;
+    padding-right: 6px;
+}
