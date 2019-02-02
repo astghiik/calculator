@@ -1,6 +1,7 @@
 let op1 = '';
 let op2 = '';
 let operator = '';
+const  operators = ['+', '-', '÷', '×'];
 
 function calculate(op1, operator, op2) {
     if (operator === '+') {
@@ -38,9 +39,9 @@ for (let i = 1; i < td.length; i ++) {
             op2 = '';
             operator = '';
             value = '';
-        } else if (!op2 && value !== '-' && value !== '+' && value !== '÷' && value !== '×' && !operator) {
+        } else if (!op2 && !operators.includes(value) && !operator) {
             op1 += value;
-        } else if (op1 && !op2 && (value === '-' || value === '+' || value === '÷' || value === '×')) {
+        } else if (op1 && !op2 && operators.includes(value)) {
             operator = value;
         } else if (op1 && operator && value !== '=') {
             op2 += value;
